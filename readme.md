@@ -1,0 +1,2 @@
+# Kurs JavaScript
+## Lekcja pierwsza
