@@ -47,6 +47,17 @@ lista słów do wylosowania
 system losowania słów
 rysunek wisielca
 */
+/*
+let word = "home";
+word = word.split('');
+console.log(word);
+*/
 
+var guesses = 10;
+var wordToGuess = ['h', 'o', 'm', 'e'];
+var arrayForGuessing = [];
 
+for (let i = wordToGuess.length; i > 0; i--) {
+    arrayForGuessing.push('_') //making a empty array for the user to guess
+}
 
