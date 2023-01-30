@@ -58,3 +58,31 @@
 - parametrem funkcji może być kolejna funkcja
 - function *nazwa funkcji*(*parametry*){*treść funkcji*}
 - jeśli nie wpiszesz parametrów zostaną uznane jako undefined
+
+---
+
+## Lekcja siódma - *instrukcje warunkowe*
+- oprócz if'a możemy użyć operatorów warunkowych
+    - ? --> if true
+    - : --> else
+    - result = k > 0 ? "K is positive" : "K is negative";
+- switch --> porównanie przypadków i wykonanie poleceń w zależności od przypadku
+    - idzie po wszystkich case'ach bezwzględu na to czy poprzednie się wykonały
+    - case *przykładowy wynik* --> dla danego przypdaku zrób to: ...
+    - default --> dla każdeko innego przypadku zrób to / jeśli żaden z powyższych przypadkó nie wystąpił zrób to: ...
+    - break --> przerywa sprawdzanie case'ów
+    - switch (*np nazwa zmiennej*) {
+
+        case *przykładowy wynik*:
+
+        {
+            co ma się stać
+        }
+
+        default:
+        
+        {
+            co ma się stać
+        }
+
+         }
