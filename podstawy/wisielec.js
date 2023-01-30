@@ -49,8 +49,8 @@ word = word.split('');
 console.log(word);
 */
 
-let wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
-let guesses = 7;
+const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
+const guesses = 7;
 let wordToGuess = [];
 let arrayForGuessing = [];
 
@@ -83,10 +83,8 @@ for (; guesses !== 0; guesses--) {
         console.log(arrayForGuessing);
     }
 
-    
 
 };
-
 
 
 function gamePrep(){
@@ -99,8 +97,6 @@ function gamePrep(){
         arrayForGuessing.push(' _ ') 
     };
 };
-
-
 
 
 function wordDraw(words)
