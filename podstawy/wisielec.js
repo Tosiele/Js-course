@@ -30,4 +30,23 @@ _________
 |      / \
 */
 
+/*
+PLAN:
+Tablica ze słowem
+Tablica o tej samej długości - do uzupełniania, na początku wypełniona '_'
+liczba prób
+W pętli:
+wyświetlanie pustej tablicy do uzupełnienia
+Pytanie o literę
+Pszeszukiwanie w zagnieżdżonej pętli o literę
+uzupełnianie odpowiadających miejsc w pustej tablicy
+zmniejszenie liczby prób
+
+DO DODANIA:
+lista słów do wylosowania
+system losowania słów
+rysunek wisielca
+*/
+
+
 
