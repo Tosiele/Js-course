@@ -16,3 +16,11 @@
 - let --> zmienna blokowa (dla danego bloku), nie może zostać ponownie zadekarowana
 - const --> zmienna stała/niezmienna
 - wszystkie zmienne mogą być każdego typu - stringi, liczby, tablice
+
+---
+
+## Lekcja trzecia - *operatory*
+- ** --> potęgowanie
+- == (przeciwieństwo !=) --> porównywanie wyłącznie wartości zmiennej
+- === (przeciwieństwo !==) --> porównywanie zarówno wartości jak i typu zmiennej
+- !(*warunek logiczny*) --> negacja warunku (jeśli warunek jest true to wypisze nam false)
