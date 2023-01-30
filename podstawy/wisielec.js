@@ -53,21 +53,20 @@ word = word.split('');
 console.log(word);
 */
 
-var guesses = 10;
-var wordToGuess = ['h', 'o', 'm', 'e'];
-var arrayForGuessing = [];
+let guesses = 10;
+let wordToGuess = ['h', 'o', 'm', 'e'];
+let arrayForGuessing = [];
 
 for (let i = wordToGuess.length; i > 0; i--) {
     arrayForGuessing.push(' _ ') //making a empty array for the user to guess
 };
 
-var readlineSync = require('readline-sync');
-var guess;
+let readlineSync = require('readline-sync');
+let guess;
 
 for (; guesses !== 0; guesses--) {
 
-    if (arrayForGuessing === wordToGuess)
-    {
+    if (arrayForGuessing === wordToGuess){
         break;
     };
 
