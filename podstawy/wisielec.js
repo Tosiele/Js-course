@@ -32,7 +32,7 @@ _________
 
 /*
 PLAN:
-wylosuj słowo (losowanie słowa z bazy i tworzenie tablicy o tej samej długośći z '_') -> funkcja
+[]wylosuj słowo (losowanie słowa z bazy i tworzenie tablicy o tej samej długośći z '_') -> funkcja
 sprawdzenie czy słowo już nie zostało zgadnięte (wygrana lub przegrana) --> funkcja
 wypisz słowo (liczba prób)
 pobierz literę
@@ -50,7 +50,7 @@ console.log(word);
 */
 
 const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
-const guesses = 7;
+let guesses = 7;
 let wordToGuess = [];
 let arrayForGuessing = [];
 
@@ -61,9 +61,9 @@ console.log(wordToGuess);
 let readlineSync = require('readline-sync');
 let guess;
 
-for (; guesses !== 0; guesses--) {
+for (; ; guesses--) {
 
-    if (arrayForGuessing === wordToGuess){
+    if (winCheck() == 0){
         break;
     };
 
@@ -82,8 +82,6 @@ for (; guesses !== 0; guesses--) {
         arrayForGuessing[index] = wordToGuess[index];
         console.log(arrayForGuessing);
     }
-
-
 };
 
 
@@ -105,4 +103,17 @@ function wordDraw(words)
     const random = Math.floor(Math.random() * (words.length));
     
     return words[random];
+};
+
+
+function winCheck(){
+    if (arrayForGuessing === wordToGuess){
+        console.log("Congrats, you won!");
+        return 0;
+    }
+    else if (guesses == 0){
+        console.log("You lose. You'll be hanging for eternity.");
+        return 0;
+    }
+
 };
