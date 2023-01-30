@@ -15,7 +15,7 @@
 - var --> zmienna globalna, może zostać nadpisana 
 - let --> zmienna blokowa (dla danego bloku), nie może zostać ponownie zadekarowana
 - const --> zmienna stała/niezmienna
-- wszystkie zmienne mogą być każdego typu - stringi, number, tablice, null - object, boolean, undefined
+- wszystkie zmienne mogą być każdego typu - stringi, number, null - object, boolean, undefined
 - typeof *nazwa zmiennej* --> sprawdzenie typu zmiennej
 
 ---
@@ -40,3 +40,12 @@
 
 
         } ;
+
+---
+
+## Lekcja piąta - *tablice*
+- *nazwa tablicy*.push(*elementy*) --> dodaje elementy na koniec tablicy
+- *nazwa*[*numer miejsca w tablicy*] --> doastaje się do danego miejsca w tablicy (można go osobno zdefiniować np. tab[0] = 6)
+- *nazwa*.pop --> wyjmuje ostatni element z tablicy i go zwraca
+- *nazwa*.length --> zwraca długość tablicy
+- *nazwa*.sort() --> sortuje tablicę leksykograficznie (jeśli maamy tablicę [1, 13, 2] to taka zostanie bo 13 zaczyna się od 1)
