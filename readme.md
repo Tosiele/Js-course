@@ -49,3 +49,12 @@
 - *nazwa*.pop --> wyjmuje ostatni element z tablicy i go zwraca
 - *nazwa*.length --> zwraca długość tablicy
 - *nazwa*.sort() --> sortuje tablicę leksykograficznie (jeśli maamy tablicę [1, 13, 2] to taka zostanie bo 13 zaczyna się od 1)
+
+---
+
+## Lekcja szósta - *funkcje*
+- do funkcji możemy się odwoływać po lub przed jej zadeklarowaniem
+- funkcja może być elementem obiektu
+- parametrem funkcji może być kolejna funkcja
+- function *nazwa funkcji*(*parametry*){*treść funkcji*}
+- jeśli nie wpiszesz parametrów zostaną uznane jako undefined
