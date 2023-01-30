@@ -15,7 +15,8 @@
 - var --> zmienna globalna, może zostać nadpisana 
 - let --> zmienna blokowa (dla danego bloku), nie może zostać ponownie zadekarowana
 - const --> zmienna stała/niezmienna
-- wszystkie zmienne mogą być każdego typu - stringi, liczby, tablice
+- wszystkie zmienne mogą być każdego typu - stringi, number, tablice, null - object, boolean, undefined
+- typeof *nazwa zmiennej* --> sprawdzenie typu zmiennej
 
 ---
 
