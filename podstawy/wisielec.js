@@ -58,6 +58,21 @@ var wordToGuess = ['h', 'o', 'm', 'e'];
 var arrayForGuessing = [];
 
 for (let i = wordToGuess.length; i > 0; i--) {
-    arrayForGuessing.push('_') //making a empty array for the user to guess
-}
+    arrayForGuessing.push(' _ ') //making a empty array for the user to guess
+};
 
+var readlineSync = require('readline-sync');
+var guess;
+
+for (; guesses !== 0; guesses--) {
+
+    if (arrayForGuessing === wordToGuess)
+    {
+        break;
+    };
+
+    console.log("Your word to guess will be: " + arrayForGuessing);
+    guess = readlineSync.question("What is your letter of choice? ")
+    console.log(guess);
+
+};
