@@ -32,20 +32,16 @@ _________
 
 /*
 PLAN:
-Tablica ze słowem
-Tablica o tej samej długości - do uzupełniania, na początku wypełniona '_'
-liczba prób
-W pętli:
-wyświetlanie pustej tablicy do uzupełnienia
-Pytanie o literę
-Pszeszukiwanie w zagnieżdżonej pętli o literę
-uzupełnianie odpowiadających miejsc w pustej tablicy
-zmniejszenie liczby prób
+wylosuj słowo (losowanie słowa z bazy i tworzenie tablicy o tej samej długośći z '_') -> funkcja
+sprawdzenie czy słowo już nie zostało zgadnięte (wygrana lub przegrana) --> funkcja
+wypisz słowo (liczba prób)
+pobierz literę
+uzupełnij puste słowo (szukanie indexu i zamienianie litery lub informacja o braku tej litery)-> funkcja
+narysuj wisielca (tylko jak nie zgadnie - 7 linijek od góry do)-> funkcja
 
 DO DODANIA:
 lista słów do wylosowania
-system losowania słów
-rysunek wisielca
+
 */
 /*
 let word = "home";
