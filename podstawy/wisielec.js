@@ -53,13 +53,12 @@ const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "u
 let guesses = 7;
 let wordToGuess = [];
 let arrayForGuessing = [];
+let readlineSync = require('readline-sync');
+let guess;
 
 gamePrep();
 console.log(wordToGuess);
 
-
-let readlineSync = require('readline-sync');
-let guess;
 
 for (; ; guesses--) {
 
@@ -99,9 +98,7 @@ function gamePrep(){
 
 function wordDraw(words)
 {
-
     const random = Math.floor(Math.random() * (words.length));
-    
     return words[random];
 };
 
@@ -115,5 +112,4 @@ function winCheck(){
         console.log("You lose. You'll be hanging for eternity.");
         return 0;
     }
-
 };
