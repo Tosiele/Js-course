@@ -1,6 +1,8 @@
 # Kurs JavaScript
 ## Lekcja pierwsza - *pierwszy program*
 - console.log("tekst jaki chcemy wypisać")
+    - jeśli chcemy połączyć wypisywanie tekstu i zmiennych lub innych funkcji:
+    - console.log(`tekst ze zmienną ${*zmienna*} dalszy tekst`)
 - Date() -> pobiera obecną datę
 - alert("tekst który wyskoczy jako powiadomienie od strony")
 - żeby zinterpretować program 
