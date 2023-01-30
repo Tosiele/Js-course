@@ -54,13 +54,9 @@ let guesses = 7;
 let wordToGuess = [];
 let arrayForGuessing = [];
 
-wordToGuess = wordDraw(wordCollection);
-wordToGuess = wordToGuess.split('');
+gamePrep();
 console.log(wordToGuess);
 
-for (let i = wordToGuess.length; i > 0; i--) {
-    arrayForGuessing.push(' _ ') //making a empty array for the user to guess
-};
 
 let readlineSync = require('readline-sync');
 let guess;
@@ -90,6 +86,23 @@ for (; guesses !== 0; guesses--) {
     
 
 };
+
+
+
+function gamePrep(){
+    //drawing a word and making it an array
+    wordToGuess = wordDraw(wordCollection);
+    wordToGuess = wordToGuess.split('');
+
+    //making a empty array for the user to guess
+    for (let i = wordToGuess.length; i > 0; i--) {
+        arrayForGuessing.push(' _ ') 
+    };
+};
+
+
+
+
 function wordDraw(words)
 {
 
