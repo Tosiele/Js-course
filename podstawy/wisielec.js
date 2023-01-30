@@ -49,7 +49,8 @@ word = word.split('');
 console.log(word);
 */
 
-let guesses = 10;
+let wordCollection = [pink, elephant, dog, home, runner, pizza, usa, unsafe, gorilla, television, squating];
+let guesses = 7;
 let wordToGuess = ['h', 'o', 'm', 'e'];
 let arrayForGuessing = [];
 
