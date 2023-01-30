@@ -49,10 +49,14 @@ word = word.split('');
 console.log(word);
 */
 
-let wordCollection = [pink, elephant, dog, home, runner, pizza, usa, unsafe, gorilla, television, squating];
+let wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
 let guesses = 7;
-let wordToGuess = ['h', 'o', 'm', 'e'];
+let wordToGuess = [];
 let arrayForGuessing = [];
+
+wordToGuess = wordDraw(wordCollection);
+wordToGuess = wordToGuess.split('');
+console.log(wordToGuess);
 
 for (let i = wordToGuess.length; i > 0; i--) {
     arrayForGuessing.push(' _ ') //making a empty array for the user to guess
@@ -85,4 +89,11 @@ for (; guesses !== 0; guesses--) {
 
     
 
+};
+function wordDraw(words)
+{
+
+    const random = Math.floor(Math.random() * (words.length));
+    
+    return words[random];
 };
