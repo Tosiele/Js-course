@@ -25,3 +25,18 @@
 - == (przeciwieństwo !=) --> porównywanie wyłącznie wartości zmiennej
 - === (przeciwieństwo !==) --> porównywanie zarówno wartości jak i typu zmiennej
 - !(*warunek logiczny*) --> negacja warunku (jeśli warunek jest true to wypisze nam false)
+
+---
+
+## Lekcja czwarta - *obiekty*
+- obiekty to wskaźniki na miejsce w pamięci w którym znajduje się bardziej złożony zbiór informacji
+- jeśli stworzymy obiekt *tomato* a nastepnie przypiszemy go obiektowi *cucumber* to w rzeczywistości wskazuja one na to samo miejsce w pamięci więc na ten sam obiekt. Jest to ten sam obiekt --> tomato == cucumber -> true
+- przykłąd obiektu:
+    - car = {
+
+        color = red,
+        
+        maxSpeed = 320
+
+
+        } ;
