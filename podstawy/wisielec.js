@@ -90,6 +90,8 @@ function winCheck(){
         return 0;
     } else if (guesses == 0){
         console.log("\nYou lose. You'll be hanging for eternity.");
+        mistakes = 15;
+        drawHangman();
         return 0;
     }
 };
@@ -118,8 +120,12 @@ function arrayFilling(){
 
     if (index == -1){
         console.log("\nYour letter unfortunately isn't here.\n");
+        
         mistakes++;
-        drawHangman();
+        if (mistakes != 15){
+            drawHangman();
+        };
+        
     } else {
         
         while(index != -1){
