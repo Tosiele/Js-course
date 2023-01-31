@@ -33,7 +33,7 @@ _________
 /*
 PLAN:
 []wylosuj słowo (losowanie słowa z bazy i tworzenie tablicy o tej samej długośći z '_') -> funkcja
-sprawdzenie czy słowo już nie zostało zgadnięte (wygrana lub przegrana) --> funkcja
+[]sprawdzenie czy słowo już nie zostało zgadnięte (wygrana lub przegrana) --> funkcja
 wypisz słowo (liczba prób)
 pobierz literę
 uzupełnij puste słowo (szukanie indexu i zamienianie litery lub informacja o braku tej litery)-> funkcja
@@ -76,8 +76,7 @@ for (; ; guesses--) {
     
     if (index == undefined){
         console.log("Your letter unfortunately isn't here. Try another one.");
-    }
-    else{
+    }else{
         arrayForGuessing[index] = wordToGuess[index];
         console.log(arrayForGuessing);
     }
@@ -107,8 +106,7 @@ function winCheck(){
     if (arrayForGuessing === wordToGuess){
         console.log("Congrats, you won!");
         return 0;
-    }
-    else if (guesses == 0){
+    }else if (guesses == 0){
         console.log("You lose. You'll be hanging for eternity.");
         return 0;
     }
