@@ -29,13 +29,12 @@ _________
 |       ^
 |      / \
 
-narysuj wisielca (tylko jak nie zgadnie - 7 linijek od góry do)-> funkcja
 
 */
 
 
 const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating", "angry", "ilusion", "fighter", "width"];
-let guesses = 14;
+let guesses = 15;
 let wordToGuess = [];
 let arrayForGuessing = [];
 let readlineSync = require('readline-sync');
@@ -111,7 +110,8 @@ function arrayFilling(){
     index = wordToGuess.indexOf(guess);
 
     if (index == -1){
-        console.log("\nYour letter unfortunately isn't here. Try another one.");
+        console.log("\nYour letter unfortunately isn't here.\n");
+        drawHangman();
     } else {
         
         while(index != -1){
@@ -123,3 +123,137 @@ function arrayFilling(){
         }
     }
 }
+
+
+function drawHangman(){
+    switch(guesses){
+        case 14:{
+            console.log ("|");
+            break;
+        }
+        case 13:{
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 12:{
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 11:{
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 10:{
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 9:{
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 8:{
+            console.log ("|/");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 7:{
+            console.log ("_________");
+            console.log ("|/");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 6:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 5:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|       O");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 4:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|       O");
+            console.log ("|       ^");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 3:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|       O");
+            console.log ("|       ^");
+            console.log ("|      /|\\");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 2:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|       O");
+            console.log ("|       ^");
+            console.log ("|      /|\\");
+            console.log ("|       ^");
+            console.log ("|");
+            break;
+        }
+        case 1:{
+            console.log ("_________");
+            console.log ("|/      |");
+            console.log ("|       O");
+            console.log ("|       ^");
+            console.log ("|      /|\\");
+            console.log ("|       ^");
+            console.log ("|      / \\");
+            break;
+        }
+        case 0:{
+            console.log ("  ___|__  ");
+            console.log (" /      \\ ");
+            console.log (" | X  X |");
+            console.log (" \\  __  /");
+            console.log ("  \\  U /");
+            console.log ("   ----");
+            break;
+        }
+    };
+
+};
