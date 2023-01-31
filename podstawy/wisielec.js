@@ -37,6 +37,7 @@ const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "u
 let guesses = 15;
 let wordToGuess = [];
 let arrayForGuessing = [];
+let usedLetters = [];
 let readlineSync = require('readline-sync');
 let guess, index;
 let mistakes = 0;
@@ -47,8 +48,11 @@ gamePrep();
 for (; ; guesses--) {
 
     console.log("\nYour word to guess is: " + arrayForGuessing);
-    console.log(`You have ${guesses} guesses left.`);
+    console.log(`You have ${guesses} guesses left.\n`);
+    console.log("The letters you already used are: \n" + usedLetters)
+
     guess = readlineSync.question("\nWhat is your letter of choice? ")
+    usedLetters.push(guess);
     
     arrayFilling();
 
@@ -58,6 +62,7 @@ for (; ; guesses--) {
 
 };
 
+//----------------------FUNCTIONS-----------------------
 
 function gamePrep(){
     //drawing a word and making it an array
