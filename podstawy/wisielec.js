@@ -39,6 +39,7 @@ let wordToGuess = [];
 let arrayForGuessing = [];
 let readlineSync = require('readline-sync');
 let guess, index;
+let mistakes = 0;
 
 
 gamePrep();
@@ -80,7 +81,7 @@ function wordDraw(words)
 function winCheck(){
     if (arraysTheSame(arrayForGuessing, wordToGuess)){
         console.log("\nCongrats, you won!");
-        console.log("Your word was "+ arrayToString(wordToGuess));
+        console.log("Your word was "+ arrayToString(wordToGuess) + "\n");
         return 0;
     } else if (guesses == 0){
         console.log("\nYou lose. You'll be hanging for eternity.");
@@ -91,7 +92,8 @@ function winCheck(){
 
 function arraysTheSame(a, b){
     for (var i = 0; i < a.length; ++i) {
-        if (a[i] !== b[i]) return false;
+        if (a[i] !== b[i]) 
+        return false;
       }
       return true;
 };
@@ -111,6 +113,7 @@ function arrayFilling(){
 
     if (index == -1){
         console.log("\nYour letter unfortunately isn't here.\n");
+        mistakes++;
         drawHangman();
     } else {
         
@@ -126,58 +129,30 @@ function arrayFilling(){
 
 
 function drawHangman(){
-    switch(guesses){
-        case 14:{
+    switch(mistakes){
+        case 1:{
             console.log ("|");
             break;
         }
-        case 13:{
-            console.log ("|");
-            console.log ("|");
-            break;
-        }
-        case 12:{
-            console.log ("|");
+        case 2:{
             console.log ("|");
             console.log ("|");
             break;
         }
-        case 11:{
-            console.log ("|");
+        case 3:{
             console.log ("|");
             console.log ("|");
             console.log ("|");
             break;
         }
-        case 10:{
-            console.log ("|");
+        case 4:{
             console.log ("|");
             console.log ("|");
             console.log ("|");
             console.log ("|");
             break;
         }
-        case 9:{
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            break;
-        }
-        case 8:{
-            console.log ("|/");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            console.log ("|");
-            break;
-        }
-        case 7:{
-            console.log ("_________");
-            console.log ("|/");
+        case 5:{
             console.log ("|");
             console.log ("|");
             console.log ("|");
@@ -186,6 +161,34 @@ function drawHangman(){
             break;
         }
         case 6:{
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 7:{
+            console.log ("|/");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 8:{
+            console.log ("_________");
+            console.log ("|/");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            console.log ("|");
+            break;
+        }
+        case 9:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|");
@@ -195,7 +198,7 @@ function drawHangman(){
             console.log ("|");
             break;
         }
-        case 5:{
+        case 10:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|       O");
@@ -205,7 +208,7 @@ function drawHangman(){
             console.log ("|");
             break;
         }
-        case 4:{
+        case 11:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|       O");
@@ -215,7 +218,7 @@ function drawHangman(){
             console.log ("|");
             break;
         }
-        case 3:{
+        case 12:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|       O");
@@ -225,7 +228,7 @@ function drawHangman(){
             console.log ("|");
             break;
         }
-        case 2:{
+        case 13:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|       O");
@@ -235,7 +238,7 @@ function drawHangman(){
             console.log ("|");
             break;
         }
-        case 1:{
+        case 14:{
             console.log ("_________");
             console.log ("|/      |");
             console.log ("|       O");
@@ -245,7 +248,7 @@ function drawHangman(){
             console.log ("|      / \\");
             break;
         }
-        case 0:{
+        case 15:{
             console.log ("  ___|__  ");
             console.log (" /      \\ ");
             console.log (" | X  X |");
