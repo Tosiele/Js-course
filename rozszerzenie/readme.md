@@ -28,4 +28,25 @@
     - .race() - czeka tylko na pierwszą z obietnic która się wykona
 
 - async function ... --> tworzy funkcję w której możemy poczekać na wykonanie kodu asynchronicznego
-- await *function* --> czeka na wykonanie danej funkcji, może być użyte tylko w async function
+- await *function* --> czeka na wykonanie danej funkcji, może być użyte tylko dla async function
+
+---
+
+## Lekcja trzecia - *HTTP requests*
+- kody statusu:
+    - 2XX - kody powodzenia
+    - 4XX - kody błędu klienta
+    - 5XX - kody błędów serwera HTTP
+- API - interfejs programowania aplikacji
+    - procedury - konkretne zadania lub funkcje wykonywane przez program
+    - protokoły - format używany do wymiany danych pomiędzy aplikacjami
+    - narzędzia - segmenty z których da się tworyzć nowep programy
+- fetch(*link pozwalający dostać się do API*)
+    - żeby go użyć na początku programu trzeba dociągnąć paczkę
+    - import fetch from 'node-fetch';
+    - w terminalu musimy pobrać paczkę z npm
+    - npm init --> inicjalizuje projekt w którym pobierzemy paczkę, tworzy json
+    - npm i node-fetch --> pobiera paczkę z fetchem
+    - żeby ta **nowsza** paczka zadziałała w package.json pod "version" dopisujemy "type": "module",
+- .ok --> postawione przy wyniku zapytania fetcha mówi czy zostało ono zakończone powodzeniem
+- .status --> postawione przy wyniku zapytania fetcha wypisuje kod statusu HTTP
