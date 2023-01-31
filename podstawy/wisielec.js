@@ -51,9 +51,7 @@ while (guesses > 0) {
     console.log(`You have ${guesses} guesses left.\n`);
     console.log("The letters you already used are: \n" + usedLetters)
 
-    guess = readlineSync.question("\nWhat is your letter of choice? ")
-    guess = guess.toLowerCase();
-    usedLetters.push(guess);
+    askForLetter();
     
     arrayFilling();
 
@@ -83,6 +81,38 @@ function wordDraw(words)
     const random = Math.floor(Math.random() * (words.length));
     return words[random];
 };
+
+
+function askForLetter(){
+    guess = readlineSync.question("\nWhat is your letter of choice? ")
+    guess = guess.toLowerCase();
+    usedLetters.push(guess);
+};
+
+
+function arrayFilling(){
+    
+    index = wordToGuess.indexOf(guess);
+
+    if (index == -1){
+        console.log("\nYour letter unfortunately isn't here.\n");
+        
+        mistakes++;
+        if (mistakes != 15){
+            drawHangman();
+        };
+
+    } else {
+        
+        while(index != -1){
+        
+        //if you found a letter fill the array in the right place
+        arrayForGuessing[index] = wordToGuess[index];
+        index = wordToGuess.indexOf(guess, index + 1); //if multiple same letters appear search for another one
+        
+        }
+    }
+}
 
 
 function winCheck(){
@@ -115,30 +145,6 @@ function arrayToString(array){
     return word;
 };
 
-
-function arrayFilling(){
-    
-    index = wordToGuess.indexOf(guess);
-
-    if (index == -1){
-        console.log("\nYour letter unfortunately isn't here.\n");
-        
-        mistakes++;
-        if (mistakes != 15){
-            drawHangman();
-        };
-
-    } else {
-        
-        while(index != -1){
-        
-        //if you found a letter fill the array in the right place
-        arrayForGuessing[index] = wordToGuess[index];
-        index = wordToGuess.indexOf(guess, index + 1); //if multiple same letters appear search for another one
-        
-        }
-    }
-}
 
 
 function drawHangman(){
