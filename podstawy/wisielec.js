@@ -50,27 +50,27 @@ console.log(word);
 */
 
 const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
-let guesses = 7;
+let guesses = 10;
 let wordToGuess = [];
 let arrayForGuessing = [];
 let readlineSync = require('readline-sync');
 let guess, index;
 
+
 gamePrep();
 console.log(wordToGuess);
 
-
 for (; ; guesses--) {
 
-    if (winCheck() == 0){
-        break;
-    };
-
-    console.log("Your word to guess will be: " + arrayForGuessing);
+    console.log("\nYour word to guess is: " + arrayForGuessing);
     console.log(`You have ${guesses} guesses left`);
     guess = readlineSync.question("\nWhat is your letter of choice? ")
     
     arrayFilling();
+
+    if (winCheck() == 0){
+        break;
+    };
 
 };
 
@@ -96,10 +96,10 @@ function wordDraw(words)
 
 function winCheck(){
     if (arrayForGuessing === wordToGuess){
-        console.log("Congrats, you won!");
+        console.log("\nCongrats, you won!");
         return 0;
     } else if (guesses == 0){
-        console.log("You lose. You'll be hanging for eternity.");
+        console.log("\nYou lose. You'll be hanging for eternity.");
         return 0;
     }
 };
