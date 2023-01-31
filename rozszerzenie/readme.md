@@ -50,3 +50,13 @@
     - żeby ta **nowsza** paczka zadziałała w package.json pod "version" dopisujemy "type": "module",
 - .ok --> postawione przy wyniku zapytania fetcha mówi czy zostało ono zakończone powodzeniem
 - .status --> postawione przy wyniku zapytania fetcha wypisuje kod statusu HTTP
+
+---
+
+## Lekcja czwarta - *pobieranie plików*
+- fs --> file stream, biblioteka służąca do pobierania plików
+- fs.writefile(*ścieżka/nazwa pliku*, Buffer.from(*nie bufforowy typ danych*)) --> synchronicznie pobiera plik 
+- fs.promises.writefile(...) - asnchronicznie pobiera plik
+- jako drugi parametr musimy podać buffer ponieważ ta metoda nie rozumie innego typu danych - Buffer.from() zamienia dany typ danych na buffor
+
+---
