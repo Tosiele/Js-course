@@ -3,7 +3,7 @@
 - try {*niepewny kod*} --> jesli nie mamy pewności co do tego czy dany kod się wykona (ponieważ np użytkownik podać może złą watość)
 - catch() {*co zrobić gdy coś pójdzie nie tak*} --> pisany pod *try{}*, mówi co robić jeśli wystąpi błąd w danym kodzie, w nawiasie *()* tworzymy obiekt do którego zostanie wrzucona treść błędu
     - najczęściej używa sie catch(**ex**) od exeption
-    - console.error(ex.message) --> wyświetla główną/najważniejszą treść erroru
+    - console.log(ex.message) --> wyświetla główną/najważniejszą treść erroru
 - finally {} --> można dopisac po catch(), wykona się niezależnie od tego czy kod wykonał sie prawidłowo czy nieprawidłowo
 
 ---
@@ -16,7 +16,7 @@
     - resolve i reject to funkcje i jednocześnie argumenty funkcji strzałkowej wewnątrz promise
     - w kodzie funkcji promise piszemy kod jaki może się wykonać
         - jeśli się wykona piszemy resolve(*tekst*)
-        - jeśli sie nei wykona piszemy reject(*tekst*)
+        - jeśli sie nie wykona piszemy reject(*tekst*)
         - resolve i reject są jak return
 - zmienna.then (*np spodziewany rezultat* => {*co chcemy żeby się stało np rezultat będzie wypisany*})--> wywołanie obietnicy (**konsumpcja obietnicy**), kiedy promise się wykona (czyli rezultat to reject) wtedy masz coś zrobić
 - jak w przypadku *try* możemy użyć .catch po .then
@@ -28,4 +28,4 @@
     - .race() - czeka tylko na pierwszą z obietnic która się wykona
 
 - async function ... --> tworzy funkcję w której możemy poczekać na wykonanie kodu asynchronicznego
-- await *function* --> czeka na wykonanie danej funkcji asynchronicznej
+- await *function* --> czeka na wykonanie danej funkcji, może być użyte tylko w async function
