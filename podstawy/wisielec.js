@@ -68,12 +68,12 @@ for (; ; guesses--) {
 
     console.log("Your word to guess will be: " + arrayForGuessing);
     console.log(`You have ${guesses} guesses left`);
-    guess = readlineSync.question("What is your letter of choice? ")
+    guess = readlineSync.question("\nWhat is your letter of choice? ")
     
 
-    function findLetter(guess)
-    let index = wordToGuess.indexOf(guess);
-    
+    let index;
+    index = wordToGuess.indexOf(guess);
+
     if (index == undefined){
         console.log("Your letter unfortunately isn't here. Try another one.");
     }else{
