@@ -53,8 +53,12 @@ while (guesses > 0) {
 
     askForLetter();
     
+    console.log("-----------------------------------");
+
     arrayFilling();
 
+    console.log("-----------------------------------");
+    
     guesses--;
     if (winCheck() == 0){
         break;
