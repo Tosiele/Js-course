@@ -28,29 +28,14 @@ _________
 |      /|\
 |       ^
 |      / \
-*/
 
-/*
-PLAN:
-[]wylosuj słowo (losowanie słowa z bazy i tworzenie tablicy o tej samej długośći z '_') -> funkcja
-[]sprawdzenie czy słowo już nie zostało zgadnięte (wygrana lub przegrana) --> funkcja
-[]wypisz słowo (liczba prób)
-[]pobierz literę
-[]uzupełnij puste słowo (szukanie indexu i zamienianie litery lub informacja o braku tej litery)-> funkcja
 narysuj wisielca (tylko jak nie zgadnie - 7 linijek od góry do)-> funkcja
 
-DO DODANIA:
-lista słów do wylosowania
-
-*/
-/*
-let word = "home";
-word = word.split('');
-console.log(word);
 */
 
-const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating"];
-let guesses = 10;
+
+const wordCollection = ["pink", "elephant", "dog", "home", "runner", "pizza", "usa", "unsafe", "gorilla", "television", "squating", "angry", "ilusion", "fighter", "width"];
+let guesses = 14;
 let wordToGuess = [];
 let arrayForGuessing = [];
 let readlineSync = require('readline-sync');
