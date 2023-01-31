@@ -45,17 +45,19 @@ let mistakes = 0;
 
 gamePrep();
 
-for (; ; guesses--) {
+while (guesses > 0) {
 
     console.log("\nYour word to guess is: " + arrayForGuessing);
     console.log(`You have ${guesses} guesses left.\n`);
     console.log("The letters you already used are: \n" + usedLetters)
 
     guess = readlineSync.question("\nWhat is your letter of choice? ")
+    guess = guess.toLowerCase();
     usedLetters.push(guess);
     
     arrayFilling();
 
+    guesses--;
     if (winCheck() == 0){
         break;
     };
@@ -125,7 +127,7 @@ function arrayFilling(){
         if (mistakes != 15){
             drawHangman();
         };
-        
+
     } else {
         
         while(index != -1){
