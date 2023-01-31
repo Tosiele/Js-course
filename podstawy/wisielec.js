@@ -58,11 +58,10 @@ let guess, index;
 
 
 gamePrep();
-console.log(wordToGuess);
 
 for (; ; guesses--) {
 
-    console.log("\nYour word to guess is: " + arrayForGuessing + wordToGuess);
+    console.log("\nYour word to guess is: " + arrayForGuessing);
     console.log(`You have ${guesses} guesses left.`);
     guess = readlineSync.question("\nWhat is your letter of choice? ")
     
@@ -97,7 +96,7 @@ function wordDraw(words)
 function winCheck(){
     if (arraysTheSame(arrayForGuessing, wordToGuess)){
         console.log("\nCongrats, you won!");
-        console.log("Your word was " + wordToGuess);
+        console.log("Your word was "+ arrayToString(wordToGuess));
         return 0;
     } else if (guesses == 0){
         console.log("\nYou lose. You'll be hanging for eternity.");
@@ -112,6 +111,15 @@ function arraysTheSame(a, b){
       }
       return true;
 };
+
+function arrayToString(array){
+    let word = array[0];
+    for (var i = 1; i < array.length; i++) {
+        word = word + array[i];
+    };
+    return word;
+};
+
 
 function arrayFilling(){
     
