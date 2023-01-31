@@ -1,4 +1,4 @@
-# Kurs JavaScript
+# Kurs JavaScript - **podstawy**
 ## Lekcja pierwsza - *pierwszy program*
 - console.log("tekst jaki chcemy wypisać")
     - jeśli chcemy połączyć wypisywanie tekstu i zmiennych lub innych funkcji:
