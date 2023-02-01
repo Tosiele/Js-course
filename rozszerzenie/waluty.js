@@ -28,27 +28,33 @@ Dla chętnych:
 []funkcja wyświetlająca datę (w niej funkcja formatująca datę)
 to wszystko w set intervall które będzie wypisywać rezultaty tych funkcji
 
-potem funkcja zapisująca dane w pliku txt i zapisywała go
+[]potem funkcja zapisująca dane w pliku txt
 */
 
 import fetch from 'node-fetch';
 import moment from 'moment';
 import fs from 'fs';
 
-let date = moment().format('MMMM Do YYYY, h:mm:ss a');
 
-let data; 
-data = await getJson(data); //taking data from API to json format
-
-let exchangeRate;
-exchangeRate = await getExchangeRate(data); //taking exchange rate from json
-
-let output = ("\nDATE OF CHECK:" + date + "\nUSD EXCHANGE RATE: " + exchangeRate);
-
-writeInFile(output);
-
+setInterval(wholeProgramm, 10000);
 
 //----------------------FUNCTIONS-----------------------
+
+async function wholeProgramm(){
+
+    let date = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+    let data; 
+    data = await getJson(data); //taking data from API to json format
+
+    let exchangeRate;
+    exchangeRate = await getExchangeRate(data); //taking exchange rate from json
+
+    let output = ("\nDATE OF CHECK:" + date + "\nUSD EXCHANGE RATE: " + exchangeRate);
+
+    writeInFile(output);
+
+}
 
 async function getJson(currencyInfo){
     currencyInfo = await fetch("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/");
