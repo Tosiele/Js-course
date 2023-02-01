@@ -33,6 +33,7 @@ potem funkcja zapisująca dane w pliku txt i zapisywała go
 
 import fetch from 'node-fetch';
 import moment from 'moment';
+import fs from 'fs';
 
 let date = moment().format('MMMM Do YYYY, h:mm:ss a');
 
@@ -42,9 +43,9 @@ data = await getJson(data); //taking data from API to json format
 let exchangeRate;
 exchangeRate = await getExchangeRate(data); //taking exchange rate from json
 
-console.log("DATE OF CHECK: " + date);
-console.log("USD EXCHANGE RATE: " + exchangeRate);
+let output = ("\nDATE OF CHECK:" + date + "\nUSD EXCHANGE RATE: " + exchangeRate);
 
+writeInFile(output);
 
 
 //----------------------FUNCTIONS-----------------------
@@ -53,11 +54,20 @@ async function getJson(currencyInfo){
     currencyInfo = await fetch("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/");
     const json = await currencyInfo.json();
     return (json);
-}
+};
 
 function getExchangeRate(json){
     const jsonRates = json.rates[0];
     const arrayRates = Object.values(jsonRates);
     const currency = arrayRates[2];
     return currency;
-}
+};
+
+function writeInFile(text){
+    try {
+        fs.writeFileSync('C:/tosia_praca/kurs_js/rozszerzenie/test.txt', text);
+        // file written successfully
+    } catch (err) {
+        console.error(err);
+    };
+};
