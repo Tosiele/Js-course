@@ -33,30 +33,23 @@ potem funkcja zapisująca dane w pliku txt i zapisywała go
 
 import fetch from 'node-fetch';
 
-//const data = await fetch("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/");
-//const json = await data.json();
-//const walutaJson = json.rates[0];
-
 let data; 
-data = await pobierzJson(data);
+data = await getJson(data);
 console.log(data);
 
-let kurs;
-kurs = await pobierzKurs(data);
-console.log(kurs);
-//const ratesJson = data.rates[0];
-//const ratesArray = Object.values(ratesJson);
-//console.log(ratesArray[2]);
+let exchangeRate;
+exchangeRate = await getExchangeRate(data);
+console.log(exchangeRate);
 
+//----------------------FUNCTIONS-----------------------
 
-
-async function pobierzJson(dane){
-    dane = await fetch("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/");
-    const json = await dane.json();
+async function getJson(currencyInfo){
+    currencyInfo = await fetch("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/");
+    const json = await currencyInfo.json();
     return (json);
 }
 
-function pobierzKurs(json){
+function getExchangeRate(json){
     const jsonRates = json.rates[0];
     const arrayRates = Object.values(jsonRates);
     const currency = arrayRates[2];
