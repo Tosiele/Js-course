@@ -54,6 +54,9 @@ while (guesses > 0) {
     askForLetter();
     
     console.log("-----------------------------------");
+    for (let i=0; i<10; i++) {
+        console.log("\n");
+    }
 
     arrayFilling();
 
