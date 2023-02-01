@@ -71,7 +71,7 @@ function getExchangeRate(json){
 
 function writeInFile(text){
     try {
-        fs.writeFileSync('C:/tosia_praca/kurs_js/rozszerzenie/test.txt', text);
+        fs.writeFileSync('C:/tosia_praca/kurs_js/rozszerzenie/test.txt', text, { flag: 'a+' });
         // file written successfully
     } catch (err) {
         console.error(err);
