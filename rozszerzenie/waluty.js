@@ -25,7 +25,7 @@ Dla chętnych:
 
 /*
 []funkcja pobierająca dane z api - USD
-funkcja wyświetlająca datę (w niej funkcja formatująca datę)
+[]funkcja wyświetlająca datę (w niej funkcja formatująca datę)
 to wszystko w set intervall które będzie wypisywać rezultaty tych funkcji
 
 potem funkcja zapisująca dane w pliku txt i zapisywała go
@@ -34,16 +34,18 @@ potem funkcja zapisująca dane w pliku txt i zapisywała go
 import fetch from 'node-fetch';
 import moment from 'moment';
 
+let date = moment().format('MMMM Do YYYY, h:mm:ss a');
+
 let data; 
-data = await getJson(data);
-console.log(data);
+data = await getJson(data); //taking data from API to json format
 
 let exchangeRate;
-exchangeRate = await getExchangeRate(data);
-console.log(exchangeRate);
+exchangeRate = await getExchangeRate(data); //taking exchange rate from json
 
-let date = moment().format('MMMM Do YYYY, h:mm:ss a');
 console.log("DATE OF CHECK: " + date);
+console.log("USD EXCHANGE RATE: " + exchangeRate);
+
+
 
 //----------------------FUNCTIONS-----------------------
 
